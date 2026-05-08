@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+struct S1 {
+    char c;
+    int i;
+    long long 1;
+}
+
+struct S2 {
+    char c;
+    int i;
+    long long 1;
+} _attribute_((packed));
+
+
+int main()
+{
+    struct S1 s1;
+    struct S2 s2;
+    printf("%zu %zu\n", sizeof(s1),sizeof(s2) );
+}
